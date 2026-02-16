@@ -34,6 +34,9 @@ import {
   work4,
   work5,
   work6,
+  work7,
+  work8,
+  work9,
 
   LinkedInProfile,
   YoutubeProfile,
@@ -293,6 +296,27 @@ const projects = [{
     desc: "This is your personal notepad application. You can add, edit, delete, and search notes. Try adding a new note.",
     tech: [reactjs, daisyuiLogo, tailwind],
     link: "https://ak-notepad.netlify.app/"
+  },
+    {
+    image: work7,
+    title: "Dice Game",
+    desc: "A Dice Rolling Game built with ReactJS and Styled-Components!",
+    tech: [reactjs, tailwind],
+    link: "https://rolling-dice-ak.netlify.app/"
+  },
+    {
+    image: work8,
+    title: "HuntryHub",
+    desc: "HuntryHub, a modern and responsive food recipe app built using ReactJS, TailwindCSS, and Redux Toolkit.",
+    tech: [reactjs, tailwind, redux, json],
+    link: "https://akhuntryhub.netlify.app/"
+  },
+    {
+    image: work9,
+    title: "Shopfinity",
+    desc: "A dynamic and scalable eCommerce web application built with ReactJS, Redux Toolkit, and TailwindCSS, powered by a free public API",
+    tech: [reactjs, daisyuiLogo, tailwind, redux, json],
+    link: "https://shopfinity-ak.netlify.app/"
   },
 
 ];

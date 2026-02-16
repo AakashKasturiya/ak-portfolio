@@ -13,6 +13,8 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoTimeSharp } from "react-icons/io5";
 
 export const Contact = () => {
+  const COOLDOWN_MS = 30 * 1000;
+  const LAST_SENT_KEY = "contact_last_sent";
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -31,6 +33,18 @@ export const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const lastSentAt = Number(localStorage.getItem(LAST_SENT_KEY) || "0");
+    if (lastSentAt && Date.now() - lastSentAt < COOLDOWN_MS) {
+      const secondsLeft = Math.ceil((COOLDOWN_MS - (Date.now() - lastSentAt)) / 1000);
+      Swal.fire({
+        icon: "warning",
+        title: "Please wait",
+        text: `Try again in ${secondsLeft} seconds.`,
+        confirmButtonColor: "#6b4bff",
+      });
+      return;
+    }
+
     // 1. Honeypot check
     if (form.botField && form.botField.trim() !== "") {
       console.warn("Bot submission blocked.");
@@ -42,6 +56,8 @@ export const Contact = () => {
     const email = form.email.trim();
     const subject = form.subject.trim();
     const message = form.message.trim();
+
+    const containsHtml = (value) => /<[^>]*>/g.test(value);
 
     // 3. Validation patterns
     const nameRegex = /^[a-zA-Z\s]{3,50}$/;
@@ -59,12 +75,16 @@ export const Contact = () => {
       Swal.fire({ icon: "error", title: "Invalid Subject", text: "Subject must be 3–100 characters." });
       return;
     }
+    if (containsHtml(subject)) {
+      Swal.fire({ icon: "error", title: "Invalid Subject", text: "HTML tags are not allowed." });
+      return;
+    }
     if (!message || message.length < 10 || message.length > 1000) {
       Swal.fire({ icon: "error", title: "Invalid Message", text: "Message must be between 10–1000 characters." });
       return;
     }
-    if (/<script.*?>.*?<\/script>/gi.test(message)) {
-      Swal.fire({ icon: "error", title: "Invalid Content", text: "HTML or script tags are not allowed." });
+    if (containsHtml(message)) {
+      Swal.fire({ icon: "error", title: "Invalid Content", text: "HTML tags are not allowed." });
       return;
     }
 
@@ -87,6 +107,7 @@ export const Contact = () => {
       .then(
         () => {
           setLoading(false);
+          localStorage.setItem(LAST_SENT_KEY, String(Date.now()));
           Swal.fire({
             icon: "success",
             title: "Message Sent",
@@ -165,7 +186,7 @@ export const Contact = () => {
               <a href="https://www.youtube.com/@aakashkasturiyavlogs" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
                 <TiSocialYoutube className="text-3xl text-[#6B4BFF]" />
               </a>
-              <a href="https://www.instagram.com/aakashkasturiya/" target="_blank" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
+              <a href="https://www.instagram.com/aakashkasturiya/" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
                 <SlSocialInstagram className="text-3xl text-[#6B4BFF]" />
               </a>
             </div>
