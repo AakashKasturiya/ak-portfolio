@@ -1,4 +1,3 @@
-import React from "react";
 import "./linkedinpost.css";
 
 export const LinkedInPost = ({ socialMedia }) => {

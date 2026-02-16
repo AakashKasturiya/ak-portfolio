@@ -156,16 +156,16 @@ export const Contact = () => {
             </div>
 
             <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
+              <a href="https://www.linkedin.com/in/aakash-kasturiya/" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
                 <TiSocialLinkedin className="text-3xl text-[#6B4BFF]" />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
-                <TiSocialYoutube className="text-3xl text-[#6B4BFF]" />
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
+              <a href="https://github.com/AakashKasturiya" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
                 <TiSocialGithub className="text-3xl text-[#6B4BFF]" />
               </a>
-              <a href="https://instagram.com" target="_blank" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
+              <a href="https://www.youtube.com/@aakashkasturiyavlogs" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
+                <TiSocialYoutube className="text-3xl text-[#6B4BFF]" />
+              </a>
+              <a href="https://www.instagram.com/aakashkasturiya/" target="_blank" className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-[#ffffff33] rounded-md">
                 <SlSocialInstagram className="text-3xl text-[#6B4BFF]" />
               </a>
             </div>

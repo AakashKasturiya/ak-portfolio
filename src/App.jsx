@@ -5,11 +5,10 @@ import {Hero}  from './components/Hero/Hero';
 import About  from './components/About';
 import Technology from './components/Technology';
 import {Work}  from './components/Work';
-import Experience from "./components/Experince";
+import {Experience} from "./components/Experience";
 import SocialMedia from './components/SocailMedia';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import SpaceShip from './components/SpaceShip';
 
 function App() {
 

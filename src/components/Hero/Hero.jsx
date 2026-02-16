@@ -1,14 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Hero.css";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { TiSocialYoutube } from "react-icons/ti";
 import { TiSocialGithub } from "react-icons/ti";
-import { SlSocialLinkedin } from "react-icons/sl";
 import profile from "../../assets/hero/hero.png";
 import BgVideo from "../../assets/hero/bg-video.mp4";
+import { getExperienceYears } from "../../utils/experience";
 
 export const Hero = () => {
   const typingRef = useRef(null);
+  const experienceYears = getExperienceYears();
 
   useEffect(() => {
     const typingText = typingRef.current;
@@ -92,7 +93,7 @@ export const Hero = () => {
           </div>
 
           <p className="text-gray-300 mb-8 text-lg">
-            With over 4+ years of experience crafting exceptional web
+            With over {experienceYears}+ years of experience crafting exceptional web
             experiences, <br></br>I transform complex problems into elegant,
             intuitive interfaces. Passionate about clean code, performance
             optimization, and staying at the cutting edge of frontend
@@ -101,7 +102,7 @@ export const Hero = () => {
 
           <div className="flex space-x-4 mb-8">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/aakash-kasturiya/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-white rounded-md "
@@ -109,7 +110,7 @@ export const Hero = () => {
               <TiSocialLinkedin className="text-3xl text-[#6B4BFF]" />
             </a>
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/@aakashkasturiyavlogs"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-white rounded-md"
@@ -117,7 +118,7 @@ export const Hero = () => {
               <TiSocialYoutube className="text-3xl text-[#6B4BFF]" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/AakashKasturiya"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-white rounded-md"
@@ -128,8 +129,9 @@ export const Hero = () => {
 
           <div className="flex space-x-4">
             <a
-              href="#projects"
+              href="/Aakash%20Kasturiya%20(Frontend%20Developer).pdf"
               className="px-6 py-3 bg-[#6B4BFF] hover:bg-opacity-800 text-white font-medium rounded-md whitespace-nowrap"
+              download
             >
               Resume Download
             </a>
@@ -152,7 +154,7 @@ export const Hero = () => {
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-black bg-opacity-70 px-4 py-2 !rounded-button glow-border">
-              <span className="text-sm font-medium">4+ Years Experience</span>
+              <span className="text-sm font-medium">{experienceYears}+ Years Experience</span>
             </div>
           </div>
         </div>

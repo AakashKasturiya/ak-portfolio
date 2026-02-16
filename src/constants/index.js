@@ -15,9 +15,7 @@ import {
   reactjs,
   redux,
   tailwind,
-  threejs,
   git,
-  docker,
   daisyuiLogo,
   gemini,
   youtube,
@@ -302,7 +300,7 @@ const projects = [{
 const socialMedia = [{
     LinkedInProfile: LinkedInProfile,
     userName: "Aakash Kasturiya",
-    connection: "10k LinkedIn Family 😎",
+    connection: "15k LinkedIn Family 😎",
     videosCount: `100+ videos`,
     description: `Frontend Developer | ReactJs | JavaScript | SASS`,
     posts: [{
@@ -340,7 +338,7 @@ const socialMedia = [{
   {
     YoutubeProfile: YoutubeProfile,
     userName: "Aakash Kasturiya",
-    subscribers: "2.5K",
+    subscribers: "5.5k",
     videosCount: `100+ videos`,
     description: `I am a guy who loves traveling, exploring new places, vlogging
                   about my daily life, and sharing my opinions. You'll love my

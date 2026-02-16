@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { fadeIn, textVariant, staggerContainer } from "../utils/Motion";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { projects } from "../constants";
 
-export const Work = ({ index }) => {
+export const Work = () => {
   const fadeUp = {
   hidden: { opacity: 0, y: 50 },
   visible: (i = 0) => ({

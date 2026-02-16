@@ -1,17 +1,16 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 
-import React, { useEffect, useState,useRef } from 'react';
-import * as echarts from 'echarts';
+import { useEffect, useRef } from 'react';
 import "./Hero/Hero.css";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { TiSocialYoutube } from "react-icons/ti";
 import { TiSocialGithub } from "react-icons/ti";
-import { SlSocialLinkedin } from "react-icons/sl";
 import profile from "../assets/hero/hero.png";
+import { getExperienceYears } from "../utils/experience";
 
 const SpaceShip = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const typingRef = useRef(null);
+  const experienceYears = getExperienceYears();
   
     useEffect(() => {
       const typingText = typingRef.current;
@@ -54,11 +53,6 @@ const SpaceShip = () => {
       typeText();
     }, []);
   
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-purple-900 relative overflow-hidden">
       {/* Stars Background */}
@@ -82,7 +76,7 @@ const SpaceShip = () => {
                    </div>
          
                    <p className="text-gray-300 mb-8 text-lg">
-                     With over 4+ years of experience crafting exceptional web
+                     With over {experienceYears}+ years of experience crafting exceptional web
                      experiences, I transform complex problems into elegant, intuitive
                      interfaces. Passionate about clean code, performance optimization,
                      and staying at the cutting edge of frontend development.
@@ -90,7 +84,7 @@ const SpaceShip = () => {
          
                    <div className="flex space-x-4 mb-8">
                      <a
-                       href="https://linkedin.com"
+                       href="https://www.linkedin.com/in/aakash-kasturiya/"
                        target="_blank"
                        rel="noopener noreferrer"
                        className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-white rounded-md "
@@ -98,7 +92,7 @@ const SpaceShip = () => {
                        <TiSocialLinkedin className="text-3xl text-[#6B4BFF]" />
                      </a>
                      <a
-                       href="https://youtube.com"
+                       href="https://www.youtube.com/@aakashkasturiyavlogs"
                        target="_blank"
                        rel="noopener noreferrer"
                        className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-white rounded-md"
@@ -106,7 +100,7 @@ const SpaceShip = () => {
                        <TiSocialYoutube className="text-3xl text-[#6B4BFF]" />
                      </a>
                      <a
-                       href="https://github.com"
+                       href="https://github.com/AakashKasturiya"
                        target="_blank"
                        rel="noopener noreferrer"
                        className="social-icon w-12 h-12 flex items-center justify-center bg-opacity-20 bg-white rounded-md"
@@ -117,8 +111,9 @@ const SpaceShip = () => {
          
                    <div className="flex space-x-4">
                      <a
-                       href="#projects"
+                       href="/Aakash%20Kasturiya%20(Frontend%20Developer).pdf"
                        className="px-6 py-3 bg-[#6B4BFF] hover:bg-opacity-800 text-white font-medium rounded-md whitespace-nowrap"
+                       download
                      >
                        Resume Download
                      </a>
@@ -142,7 +137,7 @@ const SpaceShip = () => {
                         />
                       </div>
                       <div className="absolute -bottom-4 -right-4 bg-black bg-opacity-70 px-4 py-2 !rounded-button glow-border">
-                        <span className="text-sm font-medium">4+ Years Experience</span>
+                        <span className="text-sm font-medium">{experienceYears}+ Years Experience</span>
                       </div>
                     </div>
             {/* HTML Planet */}

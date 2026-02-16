@@ -1,4 +1,3 @@
-import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -7,7 +6,6 @@ import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
-import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/Motion";
@@ -55,7 +53,7 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
-const Experience = () => {
+const ExperienceSection = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -76,4 +74,7 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "experience");
+const Experience = SectionWrapper(ExperienceSection, "experience");
+
+export { Experience };
+export default Experience;

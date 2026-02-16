@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ export const Header = () => {
             <a href="#home" className="nav-link text-white hover:text-primary">Home</a>
             <a href="#about" className="nav-link text-white hover:text-primary">About</a>
             <a
-              href="/Aakash-Kasturiya(Resume).pdf"
+              href="/Aakash%20Kasturiya%20(Frontend%20Developer).pdf"
               className="nav-link text-white hover:text-primary"
               download
             >
@@ -67,7 +67,7 @@ export const Header = () => {
         <a href="#home" className="block nav-link" onClick={() => setIsMenuOpen(false)}>Home</a>
         <a href="#about" className="block nav-link" onClick={() => setIsMenuOpen(false)}>About</a>
         <a
-          href="/Aakash-Kasturiya(Resume).pdf"
+          href="/Aakash%20Kasturiya%20(Frontend%20Developer).pdf"
           className="block nav-link"
           download
           onClick={() => setIsMenuOpen(false)}
