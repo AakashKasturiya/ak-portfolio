@@ -1,0 +1,288 @@
+:where([class^="ri-"])::before {
+    content: "\f3c2";
+}
+
+:root {
+    --space-black: #0A0A0A;
+    --cosmic-purple: #6B4BFF;
+    --stellar-blue: #00F0FF;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--space-black);
+    color: #fff;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 4s infinite;
+}
+
+/* Add this to your main CSS or inside a <style> block */
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.menu-slide-in {
+    transform: translateX(0);
+}
+
+.menu-slide-out {
+    transform: translateX(100%);
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.glow {
+    box-shadow: 0 0 15px rgba(107, 75, 255, 0.5), 0 0 30px rgba(0, 240, 255, 0.3);
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(107, 75, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5);
+}
+
+.glow-border {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--space-black), var(--space-black)) padding-box,
+        linear-gradient(to right, var(--cosmic-purple), var(--stellar-blue)) border-box;
+}
+
+.cursor-trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--cosmic-purple), var(--stellar-blue));
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, var(--cosmic-purple), var(--stellar-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--cosmic-purple), var(--stellar-blue));
+    transform: translateX(-50%);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--cosmic-purple), var(--stellar-blue));
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.skill-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(to right, var(--cosmic-purple), var(--stellar-blue));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(107, 75, 255, 0.3), 0 5px 15px rgba(0, 240, 255, 0.2);
+}
+
+.social-icon {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+}
+
+input,
+textarea {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--cosmic-purple);
+    box-shadow: 0 0 0 2px rgba(107, 75, 255, 0.2);
+    outline: none;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--cosmic-purple), var(--stellar-blue));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.custom-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.custom-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background: linear-gradient(to right, var(--cosmic-purple), var(--stellar-blue));
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.backdrop-blur-md {
+    --tw-backdrop-blur: blur(12px);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.gradient-bg {
+    background: linear-gradient(to right, var(--cosmic-purple), var(--stellar-blue));
+}
+
+.border-button{
+    border: 1px solid #ffffff;
+}
+.border-btn{
+    border:1px solid #e5e5e5;
+}
