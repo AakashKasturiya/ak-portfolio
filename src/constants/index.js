@@ -37,7 +37,7 @@ import {
   work7,
   work8,
   work9,
-
+ work10,
   LinkedInProfile,
   YoutubeProfile,
   LinkedInPost,
@@ -317,6 +317,13 @@ const projects = [{
     desc: "A dynamic and scalable eCommerce web application built with ReactJS, Redux Toolkit, and TailwindCSS, powered by a free public API",
     tech: [reactjs, daisyuiLogo, tailwind, redux, json],
     link: "https://shopfinity-ak.netlify.app/"
+  },
+  {
+    image: work10,
+    title: "React Lab",
+    desc: "This project is a curated collection of real interview-style machine-coding components built with React + TailwindCSS",
+    tech: [reactjs, tailwind, redux, json],
+    link: "https://react-lab-coding.netlify.app/"
   },
 
 ];

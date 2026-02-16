@@ -54,6 +54,7 @@ import work6 from "../assets/work/work6.png";
 import work7 from "../assets/work/work7.png";
 import work8 from "../assets/work/work8.png";
 import work9 from "../assets/work/work9.png";
+import work10 from "../assets/work/work10.png";
 
 /* Social Media Section */
 import LinkedInProfile from "../assets/SocialMedia/LinkedInProfile.jpeg"
@@ -99,6 +100,7 @@ export {
     work7,
     work8,
     work9,
+    work10,
     LinkedInProfile,
     YoutubeProfile,
     LinkedInPost,
