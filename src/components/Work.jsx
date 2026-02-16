@@ -1,16 +1,26 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { projects } from "../constants";
 
 export const Work = () => {
+  const INITIAL_VISIBLE_PROJECTS = 6;
+  const LOAD_MORE_COUNT = 3;
+
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_PROJECTS);
+
   const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.2, duration: 0.6 },
-  }),
-};
+    hidden: { opacity: 0, y: 50 },
+    visible: (i = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6 },
+    }),
+  };
+
+  const visibleProjects = projects.slice(0, visibleCount);
+  const canLoadMore = visibleCount < projects.length;
+  const isExpanded = visibleCount >= projects.length;
 
   return (
     <section id="projects" className="py-20 relative">
@@ -26,14 +36,14 @@ export const Work = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={index}
-                          initial="hidden"
-            whileInView="visible"
-            variants={fadeUp}
-            viewport={{ once: true }}
-            custom={1}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeUp}
+              viewport={{ once: true }}
+              custom={1}
               className="project-card bg-black bg-opacity-50 overflow-hidden !rounded-lg glow-border"
             >
               <div className="h-48 overflow-hidden">
@@ -71,6 +81,27 @@ export const Work = () => {
             </motion.div>
           ))}
         </div>
+
+        {projects.length > INITIAL_VISIBLE_PROJECTS && (
+          <div className="flex justify-center mt-12">
+            <button
+              type="button"
+              onClick={() => {
+                if (canLoadMore) {
+                  setVisibleCount((prev) =>
+                    Math.min(prev + LOAD_MORE_COUNT, projects.length)
+                  );
+                  return;
+                }
+
+                setVisibleCount(INITIAL_VISIBLE_PROJECTS);
+              }}
+              className="px-7 py-3 rounded-lg glow-border bg-black bg-opacity-50 text-white font-medium tracking-wide transition hover:opacity-90"
+            >
+              {canLoadMore ? "Show More" : isExpanded ? "Show Less" : "Show More"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
