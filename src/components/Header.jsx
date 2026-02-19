@@ -19,7 +19,7 @@ export const Header = () => {
             <a href="#home" className="nav-link text-white hover:text-primary">Home</a>
             <a href="#about" className="nav-link text-white hover:text-primary">About</a>
             <a
-              href="/Aakash%20Kasturiya%20(Frontend%20Developer).pdf"
+              href="/Aakash_Kasturiya_(Frontend-Developer).pdf"
               className="nav-link text-white hover:text-primary"
               download
             >
@@ -67,7 +67,7 @@ export const Header = () => {
         <a href="#home" className="block nav-link" onClick={() => setIsMenuOpen(false)}>Home</a>
         <a href="#about" className="block nav-link" onClick={() => setIsMenuOpen(false)}>About</a>
         <a
-          href="/Aakash%20Kasturiya%20(Frontend%20Developer).pdf"
+          href="/Aakash_Kasturiya_(Frontend-Developer).pdf"
           className="block nav-link"
           download
           onClick={() => setIsMenuOpen(false)}
