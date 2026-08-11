@@ -5,7 +5,7 @@ export const Header = () => {
 
   return (
     <header>
-      <nav className="fixed top-0 left-0 w-full z-50 bg-opacity-10 bg-black backdrop-blur-md">
+      <nav className="fixed top-0 left-0 w-full z-50 ui-surface border-b border-white/5">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <a
             href="/"
@@ -50,7 +50,7 @@ export const Header = () => {
 
       {/* Slide-in Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-1/2 bg-black bg-opacity-95 text-white px-6 py-10 space-y-6 transition-transform duration-300 transform z-50 ${
+        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm ui-surface text-white px-6 py-10 space-y-6 transition-transform duration-300 transform z-50 ${
           isMenuOpen ? 'menu-slide-in' : 'menu-slide-out'
         }`}
         style={{ willChange: 'transform' }}

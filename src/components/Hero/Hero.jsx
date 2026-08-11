@@ -130,14 +130,14 @@ export const Hero = () => {
           <div className="flex space-x-4">
             <a
               href="/Aakash_Kasturiya_(Frontend-Developer).pdf"
-              className="px-6 py-3 bg-[#6B4BFF] hover:bg-opacity-800 text-white font-medium rounded-md whitespace-nowrap"
+              className="ui-btn ui-btn-primary whitespace-nowrap"
               download
             >
               Resume Download
             </a>
             <a
               href="#contact"
-              className="px-6 py-3 bg-transparent border-button text-primary hover:bg-[#6B4BFF] hover:bg-opacity-10 font-medium rounded-md whitespace-nowrap"
+              className="ui-btn ui-btn-secondary whitespace-nowrap"
             >
               Contact Me
             </a>

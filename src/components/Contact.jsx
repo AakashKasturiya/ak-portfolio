@@ -193,7 +193,7 @@ export const Contact = () => {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="bg-black bg-opacity-50 p-8 rounded-lg glow-border">
+          <div className="ui-surface p-8 glow-border">
             <form ref={formRef} onSubmit={handleSubmit}>
               {/* Honeypot Field - hidden */}
               <div style={{ position: "absolute", left: "-9999px" }}>
@@ -259,7 +259,7 @@ export const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex items-center justify-center w-full px-6 py-3 bg-[#6b4bff] hover:bg-opacity-80 text-white font-medium rounded-md"
+                className="ui-btn ui-btn-primary w-full"
               >
                 {loading ? "Sending..." : "Send Message"}
                 <IoIosSend className="ml-1" />

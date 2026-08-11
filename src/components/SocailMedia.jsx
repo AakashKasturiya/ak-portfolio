@@ -32,7 +32,7 @@ const SocialMedia = () => {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* LinkedIn Panel */}
           <motion.div
-            className="w-full lg:w-1/2 bg-white rounded shadow-lg overflow-hidden flex flex-col h-[600px]"
+            className="w-full lg:w-1/2 ui-surface glow-border overflow-hidden flex flex-col h-[600px]"
             initial="hidden"
             whileInView="visible"
             variants={fadeUp}
@@ -45,8 +45,8 @@ const SocialMedia = () => {
               </div>
               <h3 className="text-white font-semibold text-xl">LinkedIn</h3>
             </div>
-            <div className="overflow-y-auto flex-1 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
-              <div className="p-6 border-b border-gray-200">
+            <div className="overflow-y-auto flex-1">
+              <div className="p-6 border-b border-white/10">
                 <div className="flex items-start">
                   <img
                     src={socialMedia[0].LinkedInProfile}
@@ -54,20 +54,20 @@ const SocialMedia = () => {
                     className="w-24 h-24 rounded-full object-cover border-4 border-white shadow"
                   />
                   <div className="ml-4 flex-1">
-                    <h4 className="text-xl font-bold text-black mb-1">
+                    <h4 className="text-xl font-bold text-white mb-1">
                       {socialMedia[0].userName}
                     </h4>
-                    <p className="text-gray-600 mb-1 text-sm">
+                    <p className="text-gray-300 mb-1 text-sm">
                       {socialMedia[0].description}
                     </p>
-                    <div className="flex items-center text-gray-500 text-sm mb-3">
+                    <div className="flex items-center text-gray-400 text-sm mb-3">
                       <i className="ri-group-line mr-1"></i>
                       <span>{socialMedia[0].connection}</span>
                     </div>
                     <div className="flex gap-2">
                       <a
                         href="https://www.linkedin.com/in/aakash-kasturiya/"
-                        className="border-btn text-gray-600 px-4 py-1.5 text-sm font-medium rounded"
+                        className="ui-btn ui-btn-secondary px-4 py-1.5 text-sm"
                       >
                         Connect
                       </a>
@@ -77,7 +77,7 @@ const SocialMedia = () => {
               </div>
               {/* Posts Section */}
               <div className="p-6">
-                <h4 className="font-semibold mb-4 text-gray-600">
+                <h4 className="font-semibold mb-4 text-gray-300">
                   Recent Posts
                 </h4>
                 <div className="space-y-4">
@@ -85,9 +85,9 @@ const SocialMedia = () => {
                 </div>
               </div>
             </div>
-            <div className="p-6 bg-gray-50">
+            <div className="p-6">
               <a href="https://www.linkedin.com/in/aakash-kasturiya/">
-                <button className="w-full bg-[#0A66C2] text-white py-2.5 font-medium rounded cursor-pointer">
+                <button className="w-full bg-[#0A66C2] text-white py-2.5 font-medium rounded-lg cursor-pointer hover:opacity-95 transition">
                   View Full Profile
                 </button>
               </a>
@@ -96,7 +96,7 @@ const SocialMedia = () => {
 
           {/* YouTube Panel */}
           <motion.div
-            className="w-full lg:w-1/2 max-h-[600px] bg-white rounded shadow-lg overflow-hidden flex flex-col"
+            className="w-full lg:w-1/2 max-h-[600px] ui-surface glow-border overflow-hidden flex flex-col"
             initial="hidden"
             whileInView="visible"
             variants={fadeUp}
@@ -126,21 +126,21 @@ const SocialMedia = () => {
                   />
                 </div>
               </div>
-              <div className="pt-16 px-6 pb-6 border-b border-gray-200">
-                <h4 className="text-xl font-bold text-black">
+              <div className="pt-16 px-6 pb-6 border-b border-white/10">
+                <h4 className="text-xl font-bold text-white">
                   {socialMedia[1].userName}
                 </h4>
-                <div className="flex items-center text-gray-500 text-sm mt-1 mb-3">
+                <div className="flex items-center text-gray-400 text-sm mt-1 mb-3">
                   <span>{socialMedia[1].subscribers} subscribers</span>
                   <span className="mx-2">•</span>
                   <span>{socialMedia[1].videosCount}</span>
                 </div>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-300 text-sm">
                   {socialMedia[1].description}
                 </p>
               </div>
               <div className="p-6 flex-1">
-                <h4 className="font-semibold mb-4 text-gray-600">
+                <h4 className="font-semibold mb-4 text-gray-300">
                   Latest Videos
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
@@ -157,10 +157,10 @@ const SocialMedia = () => {
                             {video.duration}
                           </div>
                         </div>
-                        <h5 className="text-sm font-medium line-clamp-2 text-black">
+                        <h5 className="text-sm font-medium line-clamp-2 text-white">
                           {video.title}
                         </h5>
-                        <div className="flex items-center text-xs text-gray-500 mt-1">
+                        <div className="flex items-center text-xs text-gray-400 mt-1">
                           <span>{video.views}</span>
                           <span className="mx-1">•</span>
                           <span>{video.time}</span>
@@ -171,9 +171,9 @@ const SocialMedia = () => {
                 </div>
               </div>
             </div>
-            <div className="p-6 bg-gray-50">
+            <div className="p-6">
               <a href="https://www.youtube.com/@aakashkasturiyavlogs">
-                <button className="w-full bg-[#FF0000] text-white py-2.5 font-medium rounded cursor-pointer">
+                <button className="w-full bg-[#FF0000] text-white py-2.5 font-medium rounded-lg cursor-pointer hover:opacity-95 transition">
                   Visit YouTube Channel
                 </button>
               </a>

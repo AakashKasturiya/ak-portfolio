@@ -32,16 +32,16 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgba(255, 255, 255, 0.06);
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: rgba(255, 255, 255, 0.28);
     border-radius: 8px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: rgba(255, 255, 255, 0.42);
 }
 
 
@@ -281,8 +281,59 @@ input:checked+.slider:before {
 }
 
 .border-button{
-    border: 1px solid #ffffff;
+border: 1px solid #ffffff;
 }
 .border-btn{
-    border:1px solid #e5e5e5;
+border:1px solid #e5e5e5;
+}
+
+.ui-surface {
+background: rgba(0, 0, 0, 0.45);
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 14px;
+backdrop-filter: blur(10px);
+}
+
+.ui-surface-soft {
+background: rgba(255, 255, 255, 0.04);
+border: 1px solid rgba(255, 255, 255, 0.09);
+border-radius: 14px;
+backdrop-filter: blur(10px);
+}
+
+.ui-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 12px 18px;
+border-radius: 12px;
+font-weight: 600;
+letter-spacing: 0.2px;
+transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+will-change: transform;
+}
+
+.ui-btn:active {
+transform: translateY(1px);
+}
+
+.ui-btn-primary {
+color: white;
+background: linear-gradient(to right, var(--cosmic-purple), var(--stellar-blue));
+box-shadow: 0 10px 30px rgba(107, 75, 255, 0.18), 0 6px 18px rgba(0, 240, 255, 0.12);
+}
+
+.ui-btn-primary:hover {
+opacity: 0.92;
+}
+
+.ui-btn-secondary {
+color: white;
+background: rgba(255, 255, 255, 0.06);
+border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.ui-btn-secondary:hover {
+opacity: 0.92;
 }

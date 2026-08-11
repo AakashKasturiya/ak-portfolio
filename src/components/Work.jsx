@@ -44,7 +44,7 @@ export const Work = () => {
               variants={fadeUp}
               viewport={{ once: true }}
               custom={1}
-              className="project-card bg-black bg-opacity-50 overflow-hidden !rounded-lg glow-border"
+              className="project-card ui-surface overflow-hidden glow-border"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -96,7 +96,7 @@ export const Work = () => {
 
                 setVisibleCount(INITIAL_VISIBLE_PROJECTS);
               }}
-              className="px-7 py-3 rounded-lg glow-border bg-black bg-opacity-50 text-white font-medium tracking-wide transition hover:opacity-90"
+              className="ui-btn ui-btn-secondary glow-border"
             >
               {canLoadMore ? "Show More" : isExpanded ? "Show Less" : "Show More"}
             </button>
