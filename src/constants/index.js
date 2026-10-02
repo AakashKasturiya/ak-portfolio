@@ -335,8 +335,8 @@ const socialMedia = [{
     videosCount: `100+ videos`,
     description: `Frontend Developer | ReactJs | JavaScript | SASS`,
     posts: [{
-        text: " How can you add an element to an object using Spread Operator in Javascript❓",
-        img: "https://media.licdn.com/dms/image/v2/D5622AQGxjXP-SSGWkA/feedshare-shrink_800/B56ZYaSahpGoAg-/0/1744197762616?e=1751500800&v=beta&t=RwFtNadSXSqe4F3CEfI9Qo6GHAWZWO7K-GtMwtUkndk",
+        text: " 🚀 Just built a Professional Data Table Component in React!",
+        img: "https://media.licdn.com/dms/image/v2/D5622AQEJzWQTU6G5xQ/feedshare-image-high-res/B56Z9cbWRoIgAU-/0/1783962101295?e=1792627200&v=beta&t=I6YJ1cBVWNuHulgGQpOKfodI0LLZK8fkSEvYe2VNI5w",
         like: 115,
         time: "1 week",
         comment: 20,
@@ -349,19 +349,13 @@ const socialMedia = [{
         comment: 10,
       },
       {
-        text: "Web development can be likened to the human body---- 🤖 where each part has its own role in creating a seamless experience ",
-        img: "https://media.licdn.com/dms/image/v2/D5622AQHf4UPid04ytg/feedshare-shrink_800/B56ZVu5zZdHQAg-/0/1741322402874?e=1751500800&v=beta&t=Mn9brxpPYx25-XXL9dSOEHAwLcfu1RVvbU47_yv4hKw",
+        text: "🚨 AI can write code. ",
+        img: "https://media.licdn.com/dms/image/v2/D5622AQHODB6GKfhY8w/feedshare-image-high-res/B56Z9MxysJGgAU-/0/1783699549324?e=1792627200&v=beta&t=znPRQ4cin0plIVN01zWRIACVBtO1RvKXK-oy5sh-4zs",
         like: 100,
         time: "2 mo",
         comment: 5,
       },
-      {
-        text: "🚀 Goodbye Create-React-App, Hello Next.js and Beyond! 🚀 As web development continues to evolve, it's exciting to witness",
-        img: "https://media.licdn.com/dms/image/v2/D5622AQGNMrarmrxLJQ/feedshare-shrink_800/B56ZTBQ3.UHEAg-/0/1738409216858?e=1751500800&v=beta&t=sHtkODRDNvY3s5gnBJVlv1uaHQX8YccezpIEHSpZQRA",
-        like: 5,
-        time: "3 mo",
-        comment: 5,
-      }
+
     ]
 
   },

@@ -111,7 +111,7 @@ const SpaceShip = () => {
          
                    <div className="flex space-x-4">
                      <a
-                       href="/Aakash_Kasturiya_(Frontend-Developer).pdf"
+                       href="/Aakash_Kasturiya_React_Developer_Resume.pdf"
                        className="px-6 py-3 bg-[#6B4BFF] hover:bg-opacity-800 text-white font-medium rounded-md whitespace-nowrap"
                        download
                      >

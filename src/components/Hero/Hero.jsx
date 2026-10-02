@@ -129,7 +129,7 @@ export const Hero = () => {
 
           <div className="flex space-x-4">
             <a
-              href="/Aakash_Kasturiya_(Frontend-Developer).pdf"
+              href="/Aakash_Kasturiya_React_Developer_Resume.pdf"
               className="ui-btn ui-btn-primary whitespace-nowrap"
               download
             >
