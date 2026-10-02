@@ -260,7 +260,7 @@ const projects = [{
     title: "Gemini AI Clone",
     desc: "The Gemini AI Clone is a sleek and modern conversational AI interface inspired by Google’s Gemini experience...",
     tech: [reactjs, tailwind, gemini],
-    link: "https://gemini-ak.netlify.app/"
+    link: "https://gemini-ak.vercel.app/"
   },
   {
     image: work2,
